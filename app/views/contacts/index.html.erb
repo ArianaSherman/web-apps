@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Contacts</h1>
+  <% contacts=Contact.all %>
+  <p>We have the following contacts:<%= contacts.count %></p>
+  <p><ul>
+  <%for contact in contacts%>
+  <%companyid=contact["company_id"]%>
+  <%company = Company.find_by({ "id" =>companyid})%>
+  <li><%=contact["first_name"]%> <%=contact["last_name"]%>, <%=company["name"]%></li> <!--loop is different in html embedded ruby-->
+  <%end%> <!--need to end loop-->
+  </ul></p>
+
+</body>
+</html>
