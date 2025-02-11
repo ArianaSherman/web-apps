@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Companies</h1>
+  <% companies=Company.all %>
+  <p>We have the following companies:<%= companies.count %></p>
+  <p><ul>
+  <%for company in companies%>
+  <li><%=company["name"]%></li> <!--loop is different in html embedded ruby-->
+  <%end%> <!--need to end loop-->
+  </ul></p>
+
+</body>
+</html>
