@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Dice Roll</h1>
+  <p>Roll two die and see your total</p>
+
+  <% die1=rand(1..6)
+  die2=rand(1..6)
+  total=die1+die2%>
+  <ul>Results:
+  <li>Die 1 <%=die1%></li>
+  <li>Die 2 <%=die2%></li>
+  <li>Total <%=total%></li>
+  </ul>
+</body>
+</html>
